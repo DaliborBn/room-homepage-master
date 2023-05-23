@@ -48,7 +48,7 @@
   top: auto;
   left: 50%;
   transform: translateX(-50%);
-  width: 16%;
+  width: 17%;
 }
 
 // ARROWS FOR CAROUSEL
@@ -179,28 +179,26 @@
   .shop:hover {
     opacity: 0.5;
   }
+  // HOVER ON TWO IMAGE IN #ABOUT
+  #about {
+    .image:hover img {
+      transform: scale(1.1);
+    }
+    .image::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 0.3s ease;
+    }
+    .image:hover::after {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
 }
-
-// HOVER ON TWO IMAGE IN #ABOUT
-#about {
-  .image:hover img {
-    transform: scale(1.1);
-  }
-  .image::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 0.3s ease;
-  }
-  .image:hover::after {
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-}
-
 
 
 @import 'responsive';
