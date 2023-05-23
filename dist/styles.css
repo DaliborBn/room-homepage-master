@@ -8660,6 +8660,8 @@ h3, .h3 {
     padding: 5rem; } }
 
 @media (min-width: 1440px) {
+  .navbar .nav-link {
+    font-size: 2rem; }
   #carousel-b .carousel-item {
     padding: 12rem 8rem; }
   #carousel-b .title h2, #carousel-b .title .h2 {
