@@ -8495,7 +8495,6 @@ h3, .h3 {
 .carousel-control-prev,
 .carousel-control-next {
   background-color: #000;
-  opacity: 1;
   transition: all ease 0.3s; }
 
 .nav-link {
