@@ -1,0 +1,206 @@
+@import 'utilities';
+
+.container-wrapper {
+  max-width: 144rem;
+}
+// HERO
+#hero {
+  position: relative;
+}
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  z-index: 2;
+  .navbar-toggler {
+    width: auto;
+    height: auto;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    padding: 0;
+  }
+  .navbar-toggler-icon {
+    font-size: 2rem;
+  }
+  .navbar-nav {
+    margin-left: 3rem;
+  }
+  .nav-link {
+    font-size: 1.5rem;
+    color: $white;
+    margin-right: 2rem;
+  }
+  img {
+    width: 100%;
+  }
+}
+
+// POSITION LOGO IN CENTAR OF NAVBAR
+.navbar > .container-fluid {
+  position: relative;
+  padding: 3.5rem 0 3.5rem 2.2rem;
+}
+.container-fluid > a {
+  position: absolute;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16%;
+}
+
+// ARROWS FOR CAROUSEL
+.btn-slides,
+.btn-slides-md {
+  position: absolute;
+  bottom: 0;
+  height: 5rem;
+  width: 10rem;
+  background-color: $black;
+}
+.btn-slides {
+  right: 0;
+}
+.btn-slides-md {
+  left: 0;
+}
+.carousel-control-prev, .carousel-control-next {
+  background-color: $black;
+  opacity: 1;
+  transition: all ease 0.3s;
+}
+// WHITE LINE UNDER NAV-LINK
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: $white;
+  transition: width 0.3s ease;
+}
+
+// OFFCANVAS
+.offcanvas-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0;
+  .btn-close {
+    font-size: 2rem;
+    margin-left: 2.5rem;
+    padding: 0;
+  }
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+  }
+  .nav-link {
+    color: $black;
+    font-weight: 600;
+    font-size: 1.6rem;
+    width: fit-content;
+    padding: 0 1.2rem
+  }
+}
+
+// DESCRIPTION
+#description {
+  height: 100%;
+}
+#carousel-b {
+  position: relative;
+  height: 100%;
+  .carousel-item {
+    padding: 5rem 3.2rem;
+  }
+  .title {
+    h2 {
+      font-size: 3.7rem;
+      color: $black;
+      line-height: 0.9;
+      font-weight: bold;
+    }
+  }
+  .shop {
+    display: flex;
+    margin-top: 3rem;
+    width: fit-content;
+    text-decoration: none;
+    transition: all ease 0.3s;
+    h3 {
+      font-size: 1.5rem;
+      color: $black;
+      text-transform: uppercase;
+      letter-spacing: 1.2rem;
+      margin-right: 2rem;
+    }
+    svg {
+      color: $black;
+      align-self: center;
+      height: 100%;
+    }
+  }
+}
+
+// ABOUT
+#about {
+  .text {
+    padding: 4rem 3.2rem;
+    h3 {
+      letter-spacing: 0.5rem;
+    }
+  }
+  .image {
+    overflow: hidden;
+    img {
+      width: 100%;
+      transition: all ease 0.3s;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .nav-link:hover::after { // white line under nav-link
+    width: 50%;
+  }
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: $very-dark-gray;
+  }
+  .shop:hover {
+    opacity: 0.5;
+  }
+}
+
+// HOVER ON TWO IMAGE IN #ABOUT
+#about {
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  .image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+  }
+  .image:hover::after {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+
+@import 'responsive';

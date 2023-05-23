@@ -1,0 +1,108 @@
+@media (min-width:576px) {
+  .container-fluid > a {
+    position: static;
+    transform: translateX(0)
+  }
+  .btn-slides,
+  .btn-slides-md {
+    height: 6.5rem;
+    width: 13rem;
+  }
+  .navbar > .container-fluid {
+    padding: 4rem 0 4rem 4rem;
+  }
+  #carousel-b {
+    .carousel-item {
+      padding: 4rem;
+    }
+  }
+  #about .text {
+    padding: 4rem;
+  }
+}
+
+@media (min-width:768px) {
+  //divs with same height: #hero,
+  .hero-wrapper, .description-wrapper {
+    flex-grow: 1;
+  }
+  #hero, #carousel-a, .carousel-inner, .carousel-item {
+    height: 100%;
+  }
+  .carousel-item .desktop {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  // #about
+  .item-one-wrapper, .item-two-wrapper, .item-three-wrapper {
+    flex-grow: 1;
+  }
+  #about .text, .item, .item .image {
+    height: 100%;
+  }
+  .item .image img {
+    height: 100%;
+    object-fit: cover;
+  }
+  // end
+
+  .container-fluid > a {
+    width: fit-content;
+  }
+  .navbar img {
+    max-width: 8rem;
+  }
+  #carousel-b {
+    min-height: 47rem;
+  }
+}
+
+@media (min-width:880px) {
+  #carousel-b {
+    min-height: 42rem;
+  }
+}
+
+@media (min-width:992px) {
+  .navbar .nav-link {
+    font-size: 1.8rem;
+  }
+  #carousel-b {
+    min-height: auto;
+  }
+}
+
+@media (min-width:1200px) {
+  // only .item-two-wrapper with flex-grow:1 for full width of img
+  .item-one-wrapper, .item-three-wrapper {
+    flex-grow: unset;
+  }
+  
+  .btn-slides,
+  .btn-slides-md {
+    height: 8rem;
+    width: 16rem;
+  }
+  .navbar > .container-fluid {
+    padding: 5rem 0 5rem 5rem;
+  }
+  #carousel-b .carousel-item {
+    padding: 7rem;
+  }
+  #about .text {
+    padding: 5rem;
+  }
+}
+
+@media (min-width:1440px) {
+  #carousel-b .carousel-item {
+    padding: 12rem 8rem;
+  }
+  #carousel-b .title h2 {
+    font-size: 4.8rem;
+  }
+  p {
+    font-size: 1.7rem;
+  }
+}
